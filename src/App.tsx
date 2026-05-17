@@ -56,7 +56,7 @@ export default function App() {
           <div className="absolute inset-0 rounded-full border-2 border-wedding-gold animate-ping opacity-20"></div>
           <div className="absolute inset-2 rounded-full border border-wedding-gold/40 animate-spin-slow"></div>
           <div className="w-full h-full rounded-full bg-wedding-primary flex items-center justify-center shadow-lg shadow-wedding-gold/20">
-            <span className="font-display text-4xl text-wedding-bg">AS</span>
+            <span className="font-script text-[44px] text-wedding-bg tracking-widest pt-3">AS</span>
           </div>
         </div>
       </div>
@@ -67,7 +67,7 @@ export default function App() {
             <CornerOrnaments />
             <div className="w-24 h-24 mx-auto rounded-full bg-wedding-primary flex items-center justify-center shadow-xl shadow-wedding-gold/20 relative">
               <div className="absolute inset-1 rounded-full border border-wedding-gold/60 border-dashed"></div>
-              <span className="font-display text-4xl text-wedding-bg tracking-wider">AS</span>
+              <span className="font-script text-[44px] text-wedding-bg tracking-widest pt-3">AS</span>
             </div>
             <div>
               <h2 className="tracking-[0.25em] text-sm uppercase mb-4 font-display text-wedding-gold">You're Invited</h2>
@@ -111,7 +111,7 @@ export default function App() {
           <Reveal className="text-center mb-16">
             <div className="w-28 h-28 mx-auto mb-10 rounded-full bg-wedding-primary flex items-center justify-center shadow-xl shadow-wedding-gold/20 relative">
               <div className="absolute inset-1 rounded-full border border-wedding-gold/60 border-dashed"></div>
-              <span className="font-display text-4xl text-wedding-bg tracking-wider">AS</span>
+              <span className="font-script text-[44px] text-wedding-bg tracking-widest pt-3">AS</span>
             </div>
             
             <h2 className="tracking-[0.25em] text-sm md:text-base uppercase mb-8 font-display text-wedding-gold">Wedding Invitation</h2>
@@ -248,7 +248,7 @@ export default function App() {
                 <p>திரு. பழனிச்சாமி - திருமதி. வெங்கிட்டம்மாள்</p>
                 <p>ஆகியோர் மகளவழிப்பேரனும்,</p>
                 <p>திரு. R. குருசாமி - திருமதி. G. கௌசல்யா அகியோர் புதல்வனுமாகிய</p>
-                <h3 className="text-xl font-bold text-wedding-primary mt-4">G. அரவிந்த்குமார் <span className="text-sm font-normal text-wedding-gold ml-1">M.E.,</span></h3>
+                <h3 className="text-lg sm:text-xl font-bold text-wedding-primary mt-4 whitespace-nowrap">G. அரவிந்த்குமார் <span className="text-xs sm:text-sm font-normal text-wedding-gold ml-1">M.E.,</span></h3>
                 <p className="text-xs text-wedding-gold">(NeoSOFT, Chennai)</p>
               </div>
 
@@ -260,7 +260,7 @@ export default function App() {
                 <p>ஆகியோர் மகளவழிப்பேத்தியும்,</p>
                 <p>திரு. R. செல்வகுமார் - திருமதி. S. வசந்தி அகியோர் புதல்வியுமாகிய</p>
                 <p className="text-xs">செல்வி</p>
-                <h3 className="text-xl font-bold text-wedding-primary mt-2">S. சுவேதா <span className="text-sm font-normal text-wedding-gold ml-1">B.E.,</span></h3>
+                <h3 className="text-lg sm:text-xl font-bold text-wedding-primary mt-2 whitespace-nowrap">S. சுவேதா <span className="text-xs sm:text-sm font-normal text-wedding-gold ml-1">B.E.,</span></h3>
               </div>
             </div>
 
@@ -365,17 +365,17 @@ export default function App() {
           <CornerOrnaments />
           <Reveal className="text-center font-tamil">
             <div className="w-32 h-32 mx-auto mb-16 rounded-full border border-wedding-gold/30 flex items-center justify-center relative bg-white/50">
-              <span className="font-display text-5xl text-wedding-gold tracking-widest">AS</span>
+              <span className="font-script text-6xl text-wedding-gold tracking-widest pt-4">AS</span>
             </div>
 
             <h2 className="text-3xl text-wedding-primary font-bold mb-4">திருமண அழைப்பிதழ்</h2>
             <p className="text-wedding-gold font-bold mb-10 sm:tracking-widest text-[11px] sm:text-sm">04.06.2026-வியாழக்கிழமை</p>
 
-            <h3 className="font-script text-4xl text-wedding-primary mb-2 mt-16">G. அரவிந்த்குமார் <span className="font-serif text-sm font-normal text-wedding-gold ml-1">M.E.,</span></h3>
+            <h3 className="font-script text-[1.4rem] sm:text-3xl md:text-4xl text-wedding-primary mb-2 mt-16 whitespace-nowrap">G. அரவிந்த்குமார் <span className="font-serif text-xs md:text-sm font-normal text-wedding-gold ml-1">M.E.,</span></h3>
             <div className="my-2">
               <span className="text-wedding-gold">|</span>
             </div>
-            <h3 className="font-script text-4xl text-wedding-primary mb-8 text-center">S. சுவேதா <span className="font-serif text-sm font-normal text-wedding-gold ml-1">B.E.,</span></h3>
+            <h3 className="font-script text-[1.6rem] sm:text-3xl md:text-4xl text-wedding-primary mb-8 text-center whitespace-nowrap">S. சுவேதா <span className="font-serif text-xs md:text-sm font-normal text-wedding-gold ml-1">B.E.,</span></h3>
 
             <p className="text-sm font-semibold text-wedding-primary/80 tracking-wide">
               நிகழிடம்: வேலவன் மஹால், கருமத்தம்பட்டி
