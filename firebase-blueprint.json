@@ -1,0 +1,21 @@
+{
+  "entities": {
+    "Config": {
+      "title": "Config",
+      "description": "Global configuration",
+      "type": "object",
+      "properties": {
+        "audioUrl": {
+          "type": "string",
+          "description": "The URL of the background music"
+        }
+      }
+    }
+  },
+  "firestore": {
+    "config/{configId}": {
+      "schema": { "$ref": "#/entities/Config" },
+      "description": "Global configuration for the application"
+    }
+  }
+}

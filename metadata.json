@@ -1,0 +1,8 @@
+{
+  "name": "Aravind & Swetha - Wedding Invitation",
+  "description": "Premium digital wedding invitation for G. Aravind Kumar and S. Swetha.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
