@@ -277,7 +277,7 @@ export default function App() {
 
               <div className="space-y-2">
                 <p className="font-bold text-wedding-primary">திரு. R. குருசாமி - திருமதி. G. கௌசல்யா</p>
-                <p className="text-xs text-wedding-gold mb-2">(மில்ஸ் கான்ட்ராக்டர்)</p>
+                <p className="text-xs text-wedding-gold mb-2">(பில்டிங் கான்ட்ராக்டர்)</p>
                 <p className="font-bold text-wedding-gold">தங்கை - மச்சான்</p>
                 <p><span className="font-bold text-wedding-primary">திரு. P. கார்த்திக்</span> B.Com (CA)., - <span className="font-bold text-wedding-primary">திருமதி. G. ஐஸ்வர்யா</span> B.Com.,</p>
                 <p>பாரதிபுரம்</p>
