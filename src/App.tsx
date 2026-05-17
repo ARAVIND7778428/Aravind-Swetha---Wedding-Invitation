@@ -116,10 +116,10 @@ export default function App() {
             
             <h2 className="tracking-[0.25em] text-sm md:text-base uppercase mb-8 font-display text-wedding-gold">Wedding Invitation</h2>
             
-            <h1 className="font-script text-6xl md:text-8xl text-wedding-primary mb-6 leading-tight">
-              G. Aravind Kumar <span className="text-2xl md:text-3xl font-serif text-wedding-gold ml-1">M.E.,</span><br />
+            <h1 className="font-script text-5xl sm:text-6xl md:text-8xl text-wedding-primary mb-6 leading-tight flex flex-col items-center justify-center text-center">
+              <span className="md:whitespace-nowrap">G. Aravind Kumar <span className="text-xl sm:text-2xl md:text-3xl font-serif text-wedding-gold ml-1">M.E.,</span></span>
               <span className="text-3xl md:text-5xl text-wedding-gold my-4 block">weds</span>
-              S. Swetha <span className="text-2xl md:text-3xl font-serif text-wedding-gold ml-1">B.E.,</span>
+              <span className="md:whitespace-nowrap">S. Swetha <span className="text-xl sm:text-2xl md:text-3xl font-serif text-wedding-gold ml-1">B.E.,</span></span>
             </h1>
             
             <div className="mt-8 space-y-6 bg-white/40 p-6 rounded-2xl border border-wedding-gold/20 shadow-sm relative overflow-hidden">
@@ -194,9 +194,9 @@ export default function App() {
               Cordially solicit your gracious presence with your family and friends on the auspicious occasion of the wedding of
             </p>
 
-            <h2 className="font-script text-5xl md:text-7xl text-wedding-primary mb-2">G. Aravind Kumar <span className="font-serif text-sm md:text-base not-italic text-wedding-gold ml-1 tracking-normal">M.E.,</span></h2>
+            <h2 className="font-script text-5xl md:text-7xl text-wedding-primary mb-2 md:whitespace-nowrap text-center">G. Aravind Kumar <span className="font-serif text-sm md:text-base not-italic text-wedding-gold ml-1 tracking-normal">M.E.,</span></h2>
             <p className="italic text-wedding-gold my-4 text-xl">with</p>
-            <h2 className="font-script text-5xl md:text-7xl text-wedding-primary mb-10">S. Swetha <span className="font-serif text-sm md:text-base not-italic text-wedding-gold ml-1 tracking-normal">B.E.,</span></h2>
+            <h2 className="font-script text-5xl md:text-7xl text-wedding-primary mb-10 md:whitespace-nowrap text-center">S. Swetha <span className="font-serif text-sm md:text-base not-italic text-wedding-gold ml-1 tracking-normal">B.E.,</span></h2>
 
             <div className="space-y-4">
               <p className="text-base md:text-lg tracking-wide uppercase font-semibold">
@@ -310,9 +310,9 @@ export default function App() {
 
             <div className="max-w-2xl mx-auto border border-wedding-gold/20 p-8 rounded-sm bg-white/40">
               <div className="mb-12 relative">
-                <h3 className="text-sm md:text-lg font-bold text-wedding-primary inline-block bg-wedding-bg/80 px-4 md:px-6 py-2 rounded-xl border border-wedding-gold/20 mb-8">
+                <h3 className="text-[11px] sm:text-sm md:text-lg font-bold text-wedding-primary inline-flex items-center bg-wedding-bg/80 px-3 md:px-6 py-2 rounded-xl border border-wedding-gold/20 mb-8 w-fit whitespace-nowrap">
                   <span className="text-wedding-gold">03.06.2026</span>
-                  <span className="mx-2">-</span>
+                  <span className="mx-1 md:mx-2">-</span>
                   <span>புதன்கிழமை</span>
                 </h3>
                 
@@ -333,9 +333,9 @@ export default function App() {
               </div>
 
               <div className="relative">
-                <h3 className="text-sm md:text-lg font-bold text-wedding-primary inline-block bg-wedding-bg/80 px-4 md:px-6 py-2 rounded-xl border border-wedding-gold/20 mb-8">
+                <h3 className="text-[11px] sm:text-sm md:text-lg font-bold text-wedding-primary inline-flex items-center bg-wedding-bg/80 px-3 md:px-6 py-2 rounded-xl border border-wedding-gold/20 mb-8 w-fit whitespace-nowrap">
                   <span className="text-wedding-gold">04.06.2026</span>
-                  <span className="mx-2">-</span>
+                  <span className="mx-1 md:mx-2">-</span>
                   <span>வியாழக்கிழமை</span>
                 </h3>
                 
@@ -369,7 +369,7 @@ export default function App() {
             </div>
 
             <h2 className="text-3xl text-wedding-primary font-bold mb-4">திருமண அழைப்பிதழ்</h2>
-            <p className="text-wedding-gold font-bold mb-10 tracking-widest text-sm">04.06.2026 - வியாழக்கிழமை</p>
+            <p className="text-wedding-gold font-bold mb-10 sm:tracking-widest text-[11px] sm:text-sm">04.06.2026-வியாழக்கிழமை</p>
 
             <h3 className="font-script text-4xl text-wedding-primary mb-2 mt-16">G. அரவிந்த்குமார் <span className="font-serif text-sm font-normal text-wedding-gold ml-1">M.E.,</span></h3>
             <div className="my-2">
