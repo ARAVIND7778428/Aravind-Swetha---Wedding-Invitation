@@ -122,7 +122,26 @@ export default function App() {
               S. Swetha <span className="text-2xl md:text-3xl font-serif text-wedding-gold ml-1">B.E.,</span>
             </h1>
             
-            <p className="tracking-[0.1em] text-lg mt-8 uppercase font-semibold text-wedding-primary/80">4th June 2026 - Thursday</p>
+            <div className="mt-8 space-y-6 bg-white/40 p-6 rounded-2xl border border-wedding-gold/20 shadow-sm relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-16 h-16 bg-wedding-gold/5 rounded-bl-full"></div>
+              <div className="absolute bottom-0 left-0 w-16 h-16 bg-wedding-gold/5 rounded-tr-full"></div>
+              
+              <div className="relative z-10">
+                <p className="tracking-[0.15em] text-xs md:text-sm uppercase font-display text-wedding-gold mb-2 font-bold">Reception</p>
+                <p className="tracking-[0.1em] text-sm md:text-base uppercase font-bold text-wedding-primary/90">3rd June 2026 - Wednesday</p>
+                <p className="text-xs md:text-sm font-medium text-wedding-primary/70 mt-1 uppercase tracking-wider">6:00 PM onwards</p>
+              </div>
+              
+              <div className="flex justify-center relative z-10">
+                <div className="w-16 h-[1px] bg-wedding-gold/40"></div>
+              </div>
+              
+              <div className="relative z-10">
+                <p className="tracking-[0.15em] text-xs md:text-sm uppercase font-display text-wedding-gold mb-2 font-bold">Muhurtham</p>
+                <p className="tracking-[0.1em] text-sm md:text-base uppercase font-bold text-wedding-primary/90">4th June 2026 - Thursday</p>
+                <p className="text-xs md:text-sm font-medium text-wedding-primary/70 mt-1 uppercase tracking-wider">4:30 AM to 6:00 AM</p>
+              </div>
+            </div>
           </Reveal>
 
           <Reveal delay={0.2} className="mt-20">
