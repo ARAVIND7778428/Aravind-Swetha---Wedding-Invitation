@@ -1,40 +1,31 @@
 import React, { useState, useEffect } from 'react';
 import { Reveal } from './components/Reveal';
 import { Sparkles } from './components/Sparkles';
-import { Music, Music2, MailOpen } from 'lucide-react';
-import { doc, getDoc } from 'firebase/firestore';
-import { db } from './firebase';
+import { MapPin, MailOpen, ChevronDown } from 'lucide-react';
 
 export default function App() {
-  const [isPlaying, setIsPlaying] = useState(false);
   const [loading, setLoading] = useState(true);
   const [opened, setOpened] = useState(false);
-  const [audioUrl, setAudioUrl] = useState('https://cdn.pixabay.com/download/audio/2022/01/20/audio_b2ba2dbce2.mp3?filename=soft-indian-flute-114251.mp3');
-  const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
+  const [hasScrolled, setHasScrolled] = useState(false);
 
   useEffect(() => {
-    const fetchConfig = async () => {
-      try {
-        const docRef = doc(db, 'config', 'main');
-        const docSnap = await getDoc(docRef);
-        if (docSnap.exists() && docSnap.data().audioUrl) {
-          setAudioUrl(docSnap.data().audioUrl);
-        }
-      } catch (err) {
-        console.error('Error fetching config from Firebase:', err);
+    if (!opened) return;
+    
+    // reset scroll state in case they managed to scroll on the envelope
+    if (window.scrollY === 0) {
+      setHasScrolled(false);
+    } else {
+      setHasScrolled(true);
+    }
+    
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setHasScrolled(true);
       }
     };
-    fetchConfig();
-  }, []);
-
-  useEffect(() => {
-    const newAudio = new Audio(audioUrl);
-    newAudio.loop = true;
-    setAudio(newAudio);
-    return () => {
-      newAudio.pause();
-    };
-  }, [audioUrl]);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [opened]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -45,19 +36,6 @@ export default function App() {
 
   const handleOpenInvitation = () => {
     setOpened(true);
-    if (audio) {
-      audio.play().then(() => setIsPlaying(true)).catch(e => console.log('Audio play failed', e));
-    }
-  };
-
-  const toggleMusic = () => {
-    if (!audio) return;
-    if (isPlaying) {
-      audio.pause();
-    } else {
-      audio.play().catch(e => console.log('Audio play failed', e));
-    }
-    setIsPlaying(!isPlaying);
   };
 
   const CornerOrnaments = () => (
@@ -107,14 +85,24 @@ export default function App() {
 
       {opened && <Sparkles />}
 
-      {/* Floating Music Button */}
-      <button 
-        onClick={toggleMusic}
-        className="fixed bottom-6 right-6 z-40 bg-wedding-bg/90 border border-wedding-gold/30 p-4 rounded-full shadow-lg text-wedding-primary hover:bg-wedding-gold/10 transition-all duration-300 backdrop-blur-md"
-        aria-label="Toggle background music"
+      {/* Floating Location Button */}
+      <a 
+        href="https://www.google.com/maps/search/?api=1&query=Velavan+Mahal,+Karumathampatti"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-20 right-4 md:bottom-10 md:right-10 z-50 w-14 h-14 md:w-16 md:h-16 bg-wedding-primary flex items-center justify-center rounded-full shadow-xl shadow-wedding-gold/30 hover:scale-105 transition-all duration-300 group"
+        aria-label="View venue location on Google Maps"
       >
-        {isPlaying ? <Music className="w-5 h-5 animate-pulse" /> : <Music2 className="w-5 h-5 opacity-60" />}
-      </button>
+        <div className="absolute inset-1 rounded-full border border-wedding-gold/60 border-dashed group-hover:rotate-180 transition-transform duration-700 pointer-events-none"></div>
+        <MapPin className="w-6 h-6 md:w-7 md:h-7 text-wedding-bg animate-pulse" />
+      </a>
+
+      {/* Scroll Down Indicator */}
+      {opened && !hasScrolled && (
+        <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-40 flex flex-col items-center animate-bounce transition-opacity duration-500 pointer-events-none">
+          <ChevronDown className="w-8 h-8 text-wedding-primary opacity-80" />
+        </div>
+      )}
 
       {/* Page 1 (Cover & Families) */}
       <section className="w-full min-h-screen flex flex-col items-center py-20 px-4 md:px-8 relative border-b border-wedding-gold/20">
